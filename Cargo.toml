@@ -1,6 +1,6 @@
 [package]
 name = "stitch_calculator"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Alex Janninck"]
 edition = "2021"
 
@@ -16,5 +16,5 @@ opt-level = 3
 
 [profile.release-final]
 inherits = "release"
-strip = "symbols" # or "debuginfo"
+strip = true
 lto = "fat"

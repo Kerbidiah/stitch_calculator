@@ -36,7 +36,7 @@ impl StitchApp {
 impl eframe::App for StitchApp {
 	fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
 		menu_bar::menu_bar(ctx, frame);
-		left_panel::left_panel(ctx, frame, &mut self.specs);
+		left_panel::left_panel(ctx, &mut self.specs);
 
 		// update lengths and hash if need be
 		if !self.specs.check_matching_hash(self.specs_hash) {
@@ -44,6 +44,6 @@ impl eframe::App for StitchApp {
 			self.lengths = self.specs.get_lengths();
 		}
 
-		center_panel::center_panel(ctx, frame, &self.lengths);
+		center_panel::center_panel(ctx, &self.lengths);
 	}
 }

@@ -1,6 +1,6 @@
 use crate::stitch::Specs;
 
-pub fn left_panel(ctx: &egui::Context, frame: &mut eframe::Frame, specs: &mut Specs) {
+pub fn left_panel(ctx: &egui::Context, specs: &mut Specs) {
 	egui::SidePanel::left("left panel").show(ctx, |ui| {
 		ui.heading("Parameters");
 		ui.separator();

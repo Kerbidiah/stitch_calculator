@@ -1,8 +1,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")] // hide console window on Windows in release
 
-use eframe;
-use env_logger;
-
 pub mod app;
 pub mod stitch;
 pub mod ui_element;
@@ -11,8 +8,10 @@ pub mod ui_element;
 fn main() -> eframe::Result<()> {
 	env_logger::init();
 
-	let mut native_options = eframe::NativeOptions::default();
-	native_options.default_theme = eframe::Theme::Light;
+	let native_options = eframe::NativeOptions {
+		default_theme: eframe::Theme::Light,
+		..Default::default()
+	};
 
 	eframe::run_native(
 		"Stitch Calculator App",

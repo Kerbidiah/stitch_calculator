@@ -52,7 +52,7 @@ impl Specs {
 	}
 
 	pub fn editing_ui(&mut self, ui: &mut Ui) {
-		let mut d_spacing = egui::style::Spacing::default().item_spacing;
+		// let mut d_spacing = egui::style::Spacing::default().item_spacing;
 		// d_spacing.y = 6.0;
 
 		egui::Grid::new("Settings Grid")
