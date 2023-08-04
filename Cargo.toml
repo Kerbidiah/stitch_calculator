@@ -10,11 +10,11 @@ eframe = { version = "0.22", default-features = false, features = ["default_font
 egui = "0.22"
 env_logger = "0.10"
 
-
-[profile.release]
-# strip = "symbols" or "debuginfo"
-# lto = "thin"
-
 # Optimize all dependencies even in debug builds:
 [profile.dev.package."*"]
 opt-level = 3
+
+[profile.release-final]
+inherits = "release"
+strip = "symbols" # or "debuginfo"
+lto = "fat"
