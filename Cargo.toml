@@ -3,6 +3,7 @@ name = "stitch_calculator"
 version = "0.1.1"
 authors = ["Alex Janninck"]
 edition = "2021"
+description = "an app for calculating stitches for knitting"
 
 
 [dependencies]
@@ -18,3 +19,6 @@ opt-level = 3
 inherits = "release"
 strip = true
 lto = "fat"
+
+[package.metadata.bundle]
+identifier = "com.github.Kerbidiah.stitch_calculator"
